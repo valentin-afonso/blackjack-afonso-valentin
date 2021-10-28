@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 } else {
                     // Récuperer le score du croupier
                     array_cards_croupier.push(data.cards[i].code.substring(0, 1));
-
+                    
                     var imgCards = document.createElement('img');
                     imgCards.id = 'img-'+i;
                     if (i !== 0) {

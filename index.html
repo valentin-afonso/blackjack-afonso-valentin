@@ -5,19 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto+Mono&display=swap" rel="stylesheet">
     <script src="script.js"></script>
     <title>BlackJack</title>
 </head>
 <body>
     <main>
-        <h1>BLACKJACK</h1>
-        <input type="button" value="Distribuer" id="start_game">
-        <div id="contain_croupier_hand"></div>
-        <div id="contain_player_hand"></div>
-        <div id="contain_actions">
-            <div id="contain_action_text"></div>
-            <div id="contain_action_button"></div>
+        <div class="tapis">
+            <h1>BLACKJACK</h1>
+            <div class="contain_button_start">
+                <input type="button" value="Distribuer" id="start_game">
+            </div>
+            <div id="contain_croupier_hand"></div>
+            <div id="contain_actions">
+                <div id="contain_action_text"></div>
+                <div id="contain_action_button"></div>
+            </div>
+            <div id="contain_player_hand"></div>
         </div>
+        
     </main>
 </body>
 </html>

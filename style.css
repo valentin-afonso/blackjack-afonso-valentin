@@ -5,13 +5,87 @@
 }
 img {
     max-width: 100%;
+    width: 140px;
 }
 p, ol, ul, h4, h5, h6 {
     max-width: 85ch;
+    font-size: 1rem;
 }
 h1, h2, h3 {
     max-width: 60ch;
 }
+h1 {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Ultra', serif;
+    letter-spacing: 7px;
+    font-weight: 100;
+    font-size: 3rem;
+}
 .carte_croupier {
-    height: 314px;
+    width: 140px;
+}
+.tapis {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background: center no-repeat url('img/ornement.jpg');
+    background-size: cover;
+    border-bottom-left-radius: 1000px;
+    border-bottom-right-radius: 1000px;
+    /* border: 10px solid gray; */
+    border-top: 0;
+    color: white;
+
+    -webkit-box-shadow: 0px 0px 10px 0px #000000;
+    box-shadow: 0px 0px 10px 0px #000000;
+}
+input {
+    width: 10rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 1px solid white;
+    margin: 1rem;
+    padding: 8px 1px;
+    text-transform: uppercase;
+}
+input:hover {
+    cursor: pointer;
+}
+#contain_croupier_hand, #contain_player_hand {
+    display: flex;
+    justify-content: center;
+}
+#cadre_croupier {
+    border: 2px solid white;
+    border-radius: 40px;
+    padding: 1rem 0;
+}
+#contain_action_text, #contain_action_button {
+    display: flex;
+    justify-content: center;
+}
+#contain_action_text {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 200;
+    margin: 2rem 0;
+}
+#button-surrender {
+    color: red;
+    border: 1px solid red;
+}
+.contain_button_start {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+#start_game {
+    color: green;
+    border: 1px solid green;
 }
