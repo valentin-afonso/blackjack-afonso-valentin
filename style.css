@@ -12,3 +12,6 @@ p, ol, ul, h4, h5, h6 {
 h1, h2, h3 {
     max-width: 60ch;
 }
+.carte_croupier {
+    height: 314px;
+}
