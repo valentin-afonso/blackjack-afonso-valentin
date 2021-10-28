@@ -1,0 +1,14 @@
+* {
+    margin:0; 
+    padding:0; 
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+p, ol, ul, h4, h5, h6 {
+    max-width: 85ch;
+}
+h1, h2, h3 {
+    max-width: 60ch;
+}
