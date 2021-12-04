@@ -7,27 +7,114 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
     <script src="script.js"></script>
     <title>BlackJack</title>
 </head>
 <body>
     <main>
         <div class="tapis">
-            <h1>BLACKJACK</h1>
-            <div class="contain_button_start">
-                <input type="button" value="Distribuer" id="start_game">
+            <h1>Black Jack</h1>
+            <div id ="contain_mise_form" class="contain_mise_form">
+                <div class="contain_input_mise">
+                    <label for="input_mise">Mise</label>
+                    <input type="number" id="input_mise" placeholder="Entrez votre mise">
+                </div>
+                <div class="contain_button_start">
+                    <input type="button" value="Miser" id="start_game">
+                </div>
+                <span class="text_indic">*votre wallet est de 1000</span>
+                <p id="alert_info_mise"></p>
             </div>
-            <div id="contain_croupier_hand"></div>
-            <div id="contain_actions">
-                <div id="contain_action_text"></div>
-                <div id="contain_action_button"></div>
+            <div id="contain_wallet_mise" class="contain_wallet_mise">
+                <p>wallet : <span id="wallet"></span></p>
             </div>
-            <div id="contain_player_hand"></div>
+            <img src="img/help.png" class="help" id="help_modal">
+            <div id="contain_croupier_hand" class="contain_player_croupier_hand"></div>
+            <div class="contain_separation">
+                <img class="separation" src="img/separation.png">
+            </div>
+            
+            <div id="contain_player_hand" class="contain_player_croupier_hand"></div>
+    
+            <div id="contain_ace_value" class="contain_ace_value">
+                <div class="contain_form_ace_value">
+                    <p>Quel valeure voulez vous attribuer à l'as ?</p>
+                    <div class="contain_score_ace">
+                        <div id="score_low" class="score_ace">
+                            <p>1</p>
+                        </div>
+                        <div id="score_high" class="score_ace">
+                            <p>11</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contain_actions" class="contain_actions">
+                <div id="contain_action_text">
+                    <p id="text-action"></p>
+                </div>
+                <div id="controller" class="controller">
+                    <p id="mise"></p>
+                    <div id="contain_action_button" class="contain_action_button">
+                        <input id="button-hit" class="action-button" type="button" value="Tirer une carte">
+                        <input id="button-stand" class="action-button" type="button" value="Rester">
+                        <input id="button-double" class="action-button" type="button" value="Doubler">
+                        <input id="button-surrender" class="action-button" type="button" value="Abandonner">              
+                    </div>
+                    <div id="contain_action_next_game" class="contain_action_next_game"> 
+                        <input id="button-next_game" class="action-button" type="button" value="Manche suivante"> 
+                    </div>
+                    <div id="contain_score_player" class="contain_score_player">
+                        <p id="score_player"></p>
+                    </div> 
+                </div>
+            </div>
+
         </div>
-        
+        <div id="contain_end_game" class="contain_end_game">
+            <p>Votre cagnotte est vide, vous avez perdus.</p>
+            <input type="button" value="Retentez votre chance" id="input_new_game">
+        </div>
     </main>
+
+
+    <!-- Modal rules -->
+    <div id="modal_rules" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Les règles du Black Jack</h2>
+            </div>
+            <div class="modal-body">
+                <p class="title_rules">But du jeu</p>
+                <p>Le joueur tire des cartes pour s’approcher de la valeur 21 sans la dépasser. Le but 
+                du joueur est de battre le croupier en obtenant un total de points supérieur à celui-ci 
+                ou en voyant ce dernier dépasser 21.</p>
+                <p class="title_rules">Valeur des cartes</p>
+                <p>Chaque carte numérotée de 2 à 10 a sa valeur nominale (égale au numéro sur la carte).
+                Les valets, les dames et les rois, ont une valeur de 10 points.
+                L’as vaut 1 point ou 11 points, au choix du joueur.</p>
+                <p class="title_rules">Déroulement</p>
+                <p>Lors d'une partie le joueur peut réaliser plusieurs actions :</p>
+                <ul>
+                    <li>Tirer une autres carte</li>
+                    <li>Rester (ne pas tirer une autre carte)</li>
+                    <li>Doubler votre mise (vous ne pourrez cependant tirer qu'une seule carte suplémentaire)</li>
+                    <li>Abandonner (le joueur perdra alors la moitier de sa mise)</li>
+                </ul>
+                <p> Si le croupier et le joueur dépasse 21, le joueur peut alors gagner s'il possède un total supérieur 
+                à celui du croupier.En cas d’égalité, la mise du joueur est remboursée</p>
+            </div>
+            <div class="modal-footer">
+                <p>Bonne chance !</p>
+            </div>
+        </div>
+    
+    </div>
+
 </body>
 </html>
