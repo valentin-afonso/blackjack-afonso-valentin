@@ -59,7 +59,7 @@ p, label {
     width: 100vw;
     height: 100vh;
     background-color: black;
-    background: center no-repeat url('img/ornement.jpg');
+    background: center no-repeat url('img/background.jpg');
     background-size: cover;
     color: white;
 

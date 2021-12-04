@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         imgCards.src = urlImg;
                         imgCards.className = 'carte_croupier_reveal carte-' + array_code_cards_croupier.length + ' cards';
                         let imgCards2 = document.createElement('img');
-                        imgCards2.src = 'img/carte2.png';
+                        imgCards2.src = 'img/dos_carte.png';
                         imgCards2.className = 'dos_carte dos-carte-' + array_code_cards_croupier.length + ' cards';
                         contain_croupier_hand.append(imgCards2);
                     } else {
